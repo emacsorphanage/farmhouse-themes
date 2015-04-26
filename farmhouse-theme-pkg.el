@@ -1,1 +1,5 @@
-(define-package "farmhouse-theme" "20150330.1829" "Farmhouse theme for Emacs" '((emacs "24")))
+(define-package
+  "farmhouse-theme"
+  "1.0"
+  "Farmhouse theme for Emacs"
+  '((emacs "24")))
