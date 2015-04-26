@@ -45,7 +45,6 @@ I am currently submitting this to [MELPA][http://melpa.milkbox.net/], however in
 ## TODO
 
 - set faces for more of Org-mode
-- 
 
 ## Related
 
