@@ -17,7 +17,7 @@ The color values are hand-picked and not perfectly balanced, yet I think quite p
 
 ## Installation
 
-I am currently submitting this to [MELPA][http://melpa.milkbox.net/], however in the meantime you can clone it down and require it manually by adding the following to your `.emacs` file:
+I am currently submitting this to [MELPA](http://melpa.org/), however in the meantime you can clone it down and require it manually by adding the following to your `.emacs` file:
 
 ```
 (add-to-list 'custom-theme-load-path "/path/to/farmhouse-theme")
