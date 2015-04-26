@@ -1,3 +1,30 @@
+;;; farmhouse-theme-common.el --- Farmhouse Theme, Face-setting macro
+
+;; Copyright 2015 Matthew Lyon
+
+;; Author: Matthew Lyon <matthew@lyonheart.us>
+;; URL: https://github.com/mattly/emacs-farmhouse-theme
+;; Package-Version: 1.0
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 2 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+;;
+;; Requires Emacs 24 or greater.
+;;
+
+;;; Code:
 (defvar farmhouse-color-defs
   '((gray0 "#1D1D29")
     (gray1 "#272b34")
@@ -28,15 +55,26 @@
     (purple3 "#fa5fa8")))
 
 (defun farmhouse-color (symbol)
+  "Extracs a color from farmhouse-color-defs by SYMBOL."
   (nth 1 (assoc symbol farmhouse-color-defs)))
 
-(defun farmhouse-color-remap (n symbol)
-  (list n (farmhouse-color symbol)))
+(defun farmhouse-color-remap (defs symbol)
+  "Builds palette DEFS by remapping color definition at SYMBOL."
+  (list defs (farmhouse-color symbol)))
 
 (defmacro farmhouse-theme--set-faces (name palette)
+  "Called by the theme with a NAME and PALETTE to set the faces."
   `(let* ((class '((class color) (min-colors 24)))
-          ,@(mapcar (lambda (colordef) (list (intern (concat "farm-" (symbol-name (nth 0 colordef)))) (nth 1 colordef))) farmhouse-color-defs)
+
+          ;; set all colors from the master palette to "farm-<color>"
+          ,@(mapcar (lambda (colordef)
+                      (list (intern (concat "farm-" (symbol-name (nth 0 colordef))))
+                            (nth 1 colordef)))
+                    farmhouse-color-defs)
+          ;; set all colors from the local palette to the symbol in the palette
           ,@(mapcar (lambda (colordef) (apply 'farmhouse-color-remap colordef)) palette)
+
+          ;; common styles
           (diff-added `(:foreground ,green2))
           (diff-hunk-header `(:background ,base5))
           (diff-file-header `(:foreground ,purple2 :height 1.1 :weight bold))
