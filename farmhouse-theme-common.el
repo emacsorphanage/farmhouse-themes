@@ -260,6 +260,11 @@
       `(paren-face-mismatch ((,class ,paren-unmatched)))
       `(paren-face-no-match ((,class ,paren-unmatched)))
 
+      ;; Prodigy
+      `(prodigy-green-face ((,class (:foreground ,green1))))
+      `(prodigy-red-face ((,class (:foreground ,red1))))
+      `(prodigy-yellow-face ((,class (:foreground ,yellow1))))
+
       ;; rainbow-delimiters
       `(rainbow-delimiters-depth-1-face ((,class (:foreground ,base1))))
       `(rainbow-delimiters-depth-2-face ((,class (:foreground ,base2))))
