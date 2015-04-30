@@ -286,7 +286,8 @@
       ',name
       `(ansi-color-names-vector
         [,base6 ,red2 ,green2 ,yellow2 ,blue2 ,purple2 ,cyan2 ,base1])
-      `(when (not (facep (aref ansi-term-color-vector 0)))
+      `(when (or (not (boundp 'ansi-term-color-vector))
+                 (not (facep (aref ansi-term-color-vector 0))))
          (ansi-term-color-vector
           [unspecified ,base6 ,red2 ,green2 ,yellow2 ,blue2 ,purple2 ,base1]))
       )))
