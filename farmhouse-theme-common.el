@@ -226,6 +226,9 @@
       `(magit-log-tag-label ((,class (:foreground ,yellow1))))
 
       ;; org-mode
+      `(org-block ((,class (:background ,base5))))
+      `(org-block-begin-line ((,class (:background ,base5 :foreground ,base3))))
+      `(org-block-end-line ((,class (:background ,base5 :foreground ,base3))))
       `(org-date ((,class (:forefound ,cyan1))))
       `(org-footnote ((,class (:foreground ,cyan2 :slant italic :underline t))))
       `(org-hide ((,class (:foreground ,base5))))
