@@ -121,7 +121,7 @@
       `(match ((,class (:background ,yellow1 :foreground ,base1))))
       `(isearch ((,class (:background ,yellow1 :foreground ,base1 :weight bold))))
       `(isearch-fail ((,class (:background ,red1 :foreground ,base1))))
-      `(lazy-highlight ((,class (:background ,yellow1))))
+      `(lazy-highlight ((,class (:background ,base5))))
       `(trailing-whitespace ((,class (:background ,base5))))
 
       `(evil-search-highlight-persist-highlight-face ((,class (:background ,farm-yellow3 :foreground ,farm-gray0))))
