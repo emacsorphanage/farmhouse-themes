@@ -26,7 +26,7 @@
 
 ;;; Code:
 
-(eval-when-compile (require 'farmhouse-theme-common))
+(eval-when-compile (require 'farmhouse-theme))
 (deftheme farmhouse-light "The light version of the farmhouse theme.")
 
 (farmhouse-theme--set-faces

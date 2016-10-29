@@ -1,4 +1,4 @@
-;;; farmhouse-theme-common.el --- Farmhouse Theme, Face-setting macro
+;;; farmhouse-theme.el --- Farmhouse Theme
 
 ;; Copyright 2015 Matthew Lyon
 
@@ -300,5 +300,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'farmhouse-theme-common)
-;;; farmhouse-theme-common.el ends here
+(provide 'farmhouse-theme)
+;;; farmhouse-theme.el ends here
