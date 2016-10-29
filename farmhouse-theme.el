@@ -1,4 +1,4 @@
-;;; farmhouse-theme-common.el --- Farmhouse Theme, Face-setting macro
+;;; farmhouse-theme.el --- Farmhouse Theme
 
 ;; Copyright 2015 Matthew Lyon
 
@@ -20,9 +20,21 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
+
+;; Farmhouse is a color theme I created after having severe eye
+;; fatigue issues with a popular "Mathematically Perfect" color scheme
+;; that was too dim, and another [vim color scheme I contributed
+;; heavily to][pencil-vim] that after a while I found too bright.
+;; Upon switching to Emacs via [Spacemacs][] and not finding an Emacs
+;; theme I liked, I forged this.
+
+;; The color values are hand-picked and not perfectly balanced, yet I
+;; think quite pleasing to the eye.  The name *farmhouse* is derived
+;; from the [beer style of the same name][farmhouse-beer], one of the
+;; few styles where the fermentation process isn't strictly
+;; controlled.
+
 ;; Requires Emacs 24 or greater.
-;;
 
 ;;; Code:
 (defvar farmhouse-color-defs
@@ -300,5 +312,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'farmhouse-theme-common)
-;;; farmhouse-theme-common.el ends here
+(provide 'farmhouse-theme)
+;;; farmhouse-theme.el ends here
