@@ -1,9 +1,8 @@
-;;; farmhouse-theme-common.el --- Farmhouse Theme, Face-setting macro
+;;; farmhouse-themes.el --- Farmhouse Themes, dark and light versions
 
 ;; Copyright 2015 Matthew Lyon
 
 ;; Author: Matthew Lyon <matthew@lyonheart.us>
-;; URL: https://github.com/mattly/emacs-farmhouse-theme
 ;; Package-Version: 1.0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -20,11 +19,11 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
-;; Requires Emacs 24 or greater.
-;;
+
+;; Farmhouse Themes.  There is a dark and a light version.
 
 ;;; Code:
+
 (defvar farmhouse-color-defs
   '((gray0 "#1D1D29")
     (gray1 "#272b34")
@@ -300,5 +299,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'farmhouse-theme-common)
-;;; farmhouse-theme-common.el ends here
+(provide 'farmhouse-themes)
+;;; farmhouse-themes.el ends here

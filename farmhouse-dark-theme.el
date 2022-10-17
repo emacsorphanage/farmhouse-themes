@@ -1,10 +1,8 @@
-;;; farmhouse-dark-theme.el --- Farmhouse Theme, Dark version
+;;; farmhouse-dark-theme.el --- Dark variant of the Farmhouse Theme
 
 ;; Copyright 2015 Matthew Lyon
 
 ;; Author: Matthew Lyon <matthew@lyonheart.us>
-;; URL: https://github.com/mattly/emacs-farmhouse-theme
-;; Package-Version: 1.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,13 +18,13 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
-;; Requires Emacs 24 or greater.
-;;
+
+;; The dark variant of the Farmhouse theme.
 
 ;;; Code:
 
-(eval-when-compile (require 'farmhouse-theme-common))
+(eval-when-compile (require 'farmhouse-themes))
+
 (deftheme farmhouse-dark "The dark version of the farmhouse theme.")
 
 (farmhouse-theme--set-faces
