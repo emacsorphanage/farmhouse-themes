@@ -3,7 +3,7 @@
 ;; Copyright 2015 Matthew Lyon
 
 ;; Author: Matthew Lyon <matthew@lyonheart.us>
-;; Package-Version: 1.0
+;; Package-Version: 1.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
